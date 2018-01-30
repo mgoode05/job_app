@@ -1,0 +1,11 @@
+<h1> Today's Jobs</h1>
+
+<ul> 
+    <% @jobs.each do |job| %>
+      <li>
+        <strong><%= job.firm_name %></strong>
+                <%= job.practice_area %>
+                <%= job.city %>
+      </li>
+    <% end %>
+</ul>

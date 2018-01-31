@@ -1,0 +1,34 @@
+<h1>Apply</h1>
+
+<%= @user %>
+
+<%= form_for @user do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+    </div>
+    <div>
+        <%= f.label :barred_states %>
+        <%= f.text_field :barred_states %>
+    </div>
+    <div>
+        <%= f.label :current_firm %>
+        <%= f.text_field :current_firm %>
+    </div>
+    <div>
+        <%= f.label :resume %>
+        <%= f.file_field :resume%>
+    </div>
+    <div>
+        <%= f.label :transcript %>
+        <%= f.file_field :transcript %>
+    </div>
+
+<div class="actions"><%= f.submit %> </div>
+
+<% end %>
+

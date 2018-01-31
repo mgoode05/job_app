@@ -1,5 +1,8 @@
 <h1> Attorney</h1>
-<h1>Sign Up</h1>
+<h3>Apply</h3>
+<h4> <%= @job.firm_name %> </h4>
+<h4> <%= @job.practice_area %> </h4>
+<h4> <%= @job.city %> </h4>
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
@@ -28,12 +31,24 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.label :resume %>
+    <%= f.file_field :document %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :transcript %>
+    <%= f.file_field :document %>
   </div>
+  <div class="field">
+    <%= f.label :writing_sample %>
+    <%= f.file_field :document %>
+  </div>
+  <div>
+    <select name='Usage' id="Usage">
+      <option value=" "></option>
+      <option value="First Time User">First Time User</option>
+      <option value="Frequent Visitor">Frequent Visitor</option>
+    </select>
+  </div>
+
   <div class="actions"><%= f.submit %></div>
 <% end %>

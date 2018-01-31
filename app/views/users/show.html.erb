@@ -1,0 +1,13 @@
+<h3>Users Applications</h3>
+
+<ul>
+<%= users.each do |user| %>
+    <li>
+    <%= user.name %>
+    <%= user.email %>
+    <%= user.barred_states %>
+    </li>
+<% end %>
+</ul>
+
+

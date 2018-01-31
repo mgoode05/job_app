@@ -1,9 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<h1>Job Posting</h1>
   <strong>Firm name:</strong>
   <%= @job.firm_name %>
-</p>
+
 
 <p>
   <strong>Practice area:</strong>
@@ -15,5 +13,7 @@
   <%= @job.city %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+
+<%= link_to 'Back', jobs_path %> |
+<%= link_to 'Apply', "/jobsubmission/#{@job.id}" %>
+

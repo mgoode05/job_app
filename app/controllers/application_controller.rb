@@ -14,8 +14,8 @@ end
     redirect_to login_path, alert: 'Not authorized - you must be logged in' if current_user.nil?
   end
 
-  def active_order
-    @active_order = current_user.orders.find_by(is_active: true)
+  def active_application
+    @active_application = current_user.applications.find_by(is_active: true)
   end
 end
     

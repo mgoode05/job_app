@@ -7,8 +7,8 @@ def create
     @user = User.new(user_params)
     if @user.save
         session[:user_id] = @user.id
-        current_user.orders << Order.new(is_active: true)
-        flash[ :notice] = "you have successfully signed up"
+        current_user.applications << Application.new(is_active: true)
+        flash[ :notice] = "You have successfully signed up!"
         redirect_to root_path
     else
         render :new

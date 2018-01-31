@@ -1,27 +1,35 @@
 class JobsController < ApplicationController
-  before_action :set_job, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /jobs
   # GET /jobs.json
   def index
+    # if current_user.nil?
+    #   redirect_to
+    #   new_session_path
+    # else
     @jobs = Job.all
   end
+  # end
 
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @job = Job.find(params[:id])
+   
   end
 
+
+  # # GET /jobs/new
+  # def new
+  #   @job = Job.new
+  # end
+
+  # # GET /jobs/1/edit
+  # def edit
+  # end
+
 end
-#   # GET /jobs/new
-#   def new
-#     @job = Job.new
-#   end
-
-#   # GET /jobs/1/edit
-#   def edit
-#   end
-
 #   # POST /jobs
 #   # POST /jobs.json
 #   def create

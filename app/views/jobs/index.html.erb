@@ -6,6 +6,7 @@
         <strong><%= job.firm_name %></strong>
                 <%= job.practice_area %>
                 <%= job.city %>
+                <%= link_to "Details", job_path(job.id) %>
       </li>
     <% end %>
 </ul>

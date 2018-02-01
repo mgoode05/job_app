@@ -6,11 +6,21 @@ class UsersController < ApplicationController
 
 def create
     @user = User.new(user_params)
+    # console.log(@user)
     if @user.save
         flash[ :notice] = "You have successfully applied!"
         redirect_to root_path
     else
-        render :new
+        askjdfhas834
+    end
+
+    def show
+        sadfasdasdfsadf
+        # @users = User.all
+    end
+
+    def index
+        @users = User.all
     end
 
 end
@@ -20,7 +30,5 @@ private
         params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
-    def show
-        @user = User.find(params[:id])
-    end
+
 end

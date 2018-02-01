@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
   root 'jobs#index'
-  # resources :jobs
   # resources :users, only: [:new, :create]
   # resources :session, only: [:new, :create, :destroy]
   # resources :apply
@@ -13,10 +12,10 @@ Rails.application.routes.draw do
   get '/jobs/new', to: 'jobs/#new'
   post '/jobsubmission', to: 'jobsubmission#create'
   get '/user/new/:id', to: "users#new"
-  get '/user', to: 'users#index'
+  get '/users/:id', to: 'users#show'
 
   resources :jobs
-  # resources :users
+  resources :users
   
 
 

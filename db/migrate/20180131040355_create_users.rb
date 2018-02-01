@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :email
       t.string :barred_states
       t.string :current_firm
-
+      
       t.timestamps
     end
   end

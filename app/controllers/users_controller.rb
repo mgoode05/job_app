@@ -8,15 +8,13 @@ def create
     @user = User.new(user_params)
     # console.log(@user)
     if @user.save
-        flash[ :notice] = "You have successfully applied!"
         redirect_to root_path
     else
         askjdfhas834
     end
 
     def show
-        sadfasdasdfsadf
-        # @users = User.all
+        @users = User.all
     end
 
     def index

@@ -36,6 +36,10 @@ ActiveRecord::Schema.define(version: 20180131040355) do
     t.string "email"
     t.string "barred_states"
     t.string "current_firm"
+    t.string "documentation_file_name"
+    t.string "documentation_content_type"
+    t.integer "documentation_file_size"
+    t.datetime "documentation_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
